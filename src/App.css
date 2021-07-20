@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Nunito', sans-serif;
+  height: 805px;
+  width: 1324px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+  display: grid;
+  grid-template-columns: 336px 1fr;
+  min-height: 805px;
+  min-width: 1440px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  padding-top: 85px;
+  padding-bottom: 85px;
+  height: 805px;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.avatar{
+  display: grid;
+  height: 50px;
+}
+.person{
+  justify-self: center;
+  margin: 16px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.name{
+  color: #727272;
+  justify-self: center;
+  margin: 6px;
+  font-weight: 700;
+}
+.course{
+  color: #727272;
+  justify-self: center;
+  font-weight: 400;
+}
+.menu{
+  align-self: start;
+  display: grid;
+  grid-template-rows: 10% 10% 80%;
+  padding: 67px;
+  height: 500px;
+}
+.dashboard{
+  color: #6A6A6A;
+  cursor: pointer;
+  height: 25px;
+  width: 91px;
+}
+:hover.dashboard{
+  cursor: pointer;
+  font-weight: 700;
+  color: #2F2E41;
+}
+.courses{
+  color: #6A6A6A;
+  height: 25px;
+  width: 110%;
+  cursor: pointer;
+}
+:hover.courses{
+  cursor: pointer;
+  font-weight: 700;
+  color: #2F2E41;
+}
+.logouticon{
+  display: grid;
+  align-self: center;
+  margin: 4px;
+  height: 24px;
+  width: 24px;
+  color: #fafafa;
+}
+:hover.logouticon{
+  cursor: pointer;
+  font-weight: 700;
+  color: #2F2E41;
+}
+.logout{
+  align-self: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-decoration: underline;
+  cursor: pointer;
+  height: 25px;
+  width: 86px;
+  color: #6A6A6A;
+}
+:hover.logout{
+  cursor: pointer;
+  font-weight: 700;
+  color: #2F2E41;
+}
+.quadrado{
+margin: 85px 112px 246px 112px;
+}
+.resumo{
+  color: #555555;
+}
+.componentes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 60px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.retangulo{
+  width: 246px;
+  height: 87px;
+  display: grid;
+  grid-template-areas: 
+  'numCourses vector1'
+  'enrolled vector1';
+  border-radius: 12px;
+  margin-right: 15px;
+  padding: 20px 23px 20px 33px;
+  background-color: #fafafa;
+}
+.numCourses{
+  color: #595959;
+  font-size: 24px;
+  font-weight: 700;
+  align-self:center;
+  grid-area: numCourses;
+}
+.enrolled{
+  font-size: 12px;
+  grid-area: enrolled;
+  color: #A5A5A5;
+  font-weight: 600;
+}
+.numAct{
+  color: #595959;
+  font-weight: 700;
+  font-size: 24px;
+  align-self: center;
+  grid-area: numCourses;
+}
+.nextActivities{
+  align-self: center;
+  grid-area: enrolled;
+  color: #A5A5A5;
+  font-size: 12px;
+  font-weight: 600;
+}
+.numStud{
+  color: #595959;
+  font-weight: 700;
+  font-size: 24px;
+  align-self: center;
+  grid-area: numCourses;
+}
+.onlineStud{
+  align-self: center;
+  grid-area: enrolled;
+  font-size: 12px;
+  font-weight: 600;
+  color: #A5A5A5;
+}
+.proximas{
+  color: #555555;
+}
+.atividades{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.vector1{
+  grid-area: vector1;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  background-color: white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  align-self:center;
 }
-
-.App-link {
-  color: #61dafb;
+.vector2{
+  align-self: center;
+  grid-area: vector1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.vector3{
+  align-self: center;
+  grid-area: vector1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+.card{
+  width: 300px;
+  margin-right: 15px;
+  background-color: #fafafa;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding-bottom: 10px;
+}
+.tarefa{
+  width: 300px;
+  background-color: #FCFCFC;
+  border-radius: 12px;
+  padding-bottom: 6px;
+}
+.a{
+  font-weight: 600;
+  font-size: 10px;
+  color: #737373;
+  padding: 6px 20px 6px 20px;
+}
+.b{
+  font-weight: 400;
+  font-size: 12px;
+  color: #4B4B4B;
+  padding: 6px 20px 6px 20px;
+}
+.c{
+  font-weight: 400;
+  font-size: 8px;
+  color: #8E8E8E;
+  padding: 6px 20px 6px 20px;
 }
