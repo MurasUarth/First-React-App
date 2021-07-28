@@ -1,12 +1,12 @@
 import React from 'react'
-import api from './api';
+import Api from './Api'
 
-const Cards = (cards) => {
+const Cards = ({ cards }) => {
 
   const [user, setUser] = React.useState();
 
   React.useEffect(() => {
-    api
+    Api
       .get("/user")
       .then((response) => {
 
@@ -18,10 +18,10 @@ const Cards = (cards) => {
   }, []);
   return (
     <div className='tarefa'>
-      <img className='card' src={user?.nextActivities[cards.card].image}></img>
-      <p className='a'>{user?.nextActivities[cards.card].course}</p>
-      <p className='b'>{user?.nextActivities[cards.card].title}</p>
-      <p className='c'>{user?.nextActivities[cards.card].deadline}</p>
+      <img className='card' src={user?.nextActivities[cards].image}></img>
+      <p className='a'>{user?.nextActivities[cards].course}</p>
+      <p className='b'>{user?.nextActivities[cards].title}</p>
+      <p className='c'>{user?.nextActivities[cards].deadline}</p>
     </div>
   )
 }

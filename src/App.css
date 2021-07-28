@@ -54,21 +54,23 @@ body{
 .dashboard{
   color: #6A6A6A;
   cursor: pointer;
-  height: 25px;
+  height: 18px;
   width: 91px;
+  text-decoration: none;
 }
 :hover.dashboard{
   cursor: pointer;
   font-weight: 700;
   color: #2F2E41;
 }
-.courses{
+.mycourses{
   color: #6A6A6A;
-  height: 25px;
-  width: 110%;
+  height: 18px;
+  width: 110px;
   cursor: pointer;
+  text-decoration: none;
 }
-:hover.courses{
+:hover.mycourses{
   cursor: pointer;
   font-weight: 700;
   color: #2F2E41;
@@ -101,10 +103,13 @@ body{
   color: #2F2E41;
 }
 .quadrado{
-margin: 85px 112px 246px 112px;
+max-width: 950px;
+margin: 85px 100px 246px 100px;
 }
 .resumo{
   color: #555555;
+  font-weight: 600;
+  font-size: 26px;
 }
 .componentes{
   display: grid;
@@ -170,19 +175,22 @@ margin: 85px 112px 246px 112px;
 }
 .proximas{
   color: #555555;
+  font-size: 26px;
+  font-weight: 600;
 }
 .atividades{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   width: 100%;
-  margin-right: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 .vector1{
   grid-area: vector1;
   display: grid;
+  justify-self: center;
+  align-self: center;
   justify-content: center;
   align-content: center;
   background-color: white;
@@ -195,6 +203,8 @@ margin: 85px 112px 246px 112px;
   align-self: center;
   grid-area: vector1;
   display: grid;
+  justify-self: center;
+  align-self: center;
   justify-content: center;
   align-content: center;
   background-color: white;
@@ -206,6 +216,8 @@ margin: 85px 112px 246px 112px;
   align-self: center;
   grid-area: vector1;
   display: grid;
+  justify-self: center;
+  align-self: center;
   justify-content: center;
   align-content: center;
   background-color: white;
@@ -220,12 +232,17 @@ margin: 85px 112px 246px 112px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding-bottom: 10px;
+  text-decoration: none;
+}
+:hover.card{
+  cursor: pointer;
 }
 .tarefa{
   width: 300px;
   background-color: #FCFCFC;
   border-radius: 12px;
   padding-bottom: 6px;
+  margin-right: 20px;
 }
 .a{
   font-weight: 600;
@@ -244,4 +261,52 @@ margin: 85px 112px 246px 112px;
   font-size: 8px;
   color: #8E8E8E;
   padding: 6px 20px 6px 20px;
+}
+.meuscursos{
+  color: #555555;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.header{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  margin-right: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #555555;
+}
+.info{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.class{
+  font-size: 16px;
+  font-weight: 600;
+  color: #737373;
+}
+.teacherimg{
+  grid-area: teacherimg;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.teacher{
+  align-content: center;
+  display: grid;
+  grid-template-areas: 
+  'teacherimg teachername'
+  'teacherimg responsibleteacher';
+}
+.teachername{
+  grid-area: teachername;
+  font-size: 20px;
+  font-weight: 700;
+  color: #727272;
+}
+.responsibleteacher{
+  grid-area: responsibleteacher;
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
 }
