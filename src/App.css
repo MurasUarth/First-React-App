@@ -231,7 +231,8 @@ margin: 85px 100px 246px 100px;
   background-color: #fafafa;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  padding-bottom: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   text-decoration: none;
 }
 :hover.card{
@@ -290,11 +291,13 @@ margin: 85px 100px 246px 100px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  padding-right: 5px;
 }
 .teacher{
+  width: 210px;
   align-content: center;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
   'teacherimg teachername'
   'teacherimg responsibleteacher';
 }
@@ -309,4 +312,9 @@ margin: 85px 100px 246px 100px;
   font-size: 14px;
   font-weight: 400;
   color: #727272;
+}
+.meuscursos{
+  font-size: 26px;
+  font-weight: 600;
+  color: #555555;
 }

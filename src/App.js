@@ -1,11 +1,12 @@
 import './App.css';
-import React from 'react'
-import Api from './Api'
-import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
+import React from 'react';
+import Api from './Api';
+import { BrowserRouter as Router, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
 import logouticon from './components/logouticon.svg';
 import Dashboard from './Dashboard';
-import Mycourses from './Mycourses'
-import Course1 from './Course1'
+import Mycourses from './Mycourses';
+import Course1 from './Course1';
+import Course2 from './Course2';
 
 function App() {
   const [user, setUser] = React.useState();
@@ -20,6 +21,7 @@ function App() {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
+
   return (
     <>
       <Router>
@@ -30,8 +32,10 @@ function App() {
             <p className='course'>{user?.course}</p>
           </div>
           <div className='menu'>
+
             <Link to='/' className='dashboard'>Dashboard</Link>
             <Link to='/mycourses' className='mycourses'>Meus Cursos</Link>
+
             <div className='logout'>
               <img className='logouticon' src={logouticon}></img>
               <p>Logout</p>
@@ -41,6 +45,7 @@ function App() {
         <Route path='/' exact component={Dashboard} />
         <Route path='/mycourses' component={Mycourses} />
         <Route path='/course1' component={Course1} />
+        <Route path='/course2' component={Course2} />
       </Router>
     </>
   );
